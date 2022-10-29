@@ -1,0 +1,97 @@
+@use '../core' as *;
+
+.OnlineSchool {
+  margin-bottom: 130px;
+  .header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    h2 {
+      max-width: 431px;
+      @include adaptiv-font(44, 35);
+      font-weight: bold;
+      line-height: 56px;
+    }
+
+    button {
+      padding: 19px 23px;
+      border-radius: 12px;
+      border: 1px solid get($colors, 'blue-text');
+      color: get($colors, 'blue-text');
+      background: transparent;
+      font-size: 18px;
+    }
+  }
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    justify-content: space-between;
+
+    .item {
+      padding: 12px 15px;
+
+      .img {
+        margin-bottom: 16px;
+      }
+
+      h4 {
+        margin-bottom: 38px;
+        font-weight: 600;
+        line-height: 26px;
+        @include adaptiv-font(20, 16);
+      }
+
+      .analyse {
+        display: flex;
+        margin-bottom: 25px;
+        div {
+          display: flex;
+
+          svg {
+            margin-right: 5px;
+          }
+
+          &:first-child {
+            margin-right: 40px;
+          }
+        }
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 9px 0;
+        border-radius: 14px;
+        border: 1px solid get($colors, 'blue-text');
+        color: get($colors, 'blue-text');
+        font-size: 14px;
+        background: transparent;
+        transition: get($transition, 'primary');
+
+        &:hover {
+          background: get($colors, 'blue-text');
+          color: get($colors, 'white-text');
+
+          svg {
+            path {
+              fill: get($colors, 'white-text');
+            }
+          }
+        }
+
+        svg {
+          margin-right: 10px;
+
+          path {
+            transition: get($transition, 'primary');
+          }
+        }
+      }
+    }
+  }
+}

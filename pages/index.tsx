@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.scss'
 import Header from './components/Header'
 import HowItWorks from './components/HowItWorks'
+import OnlineSchool from './components/OnlineSchool'
 import Partners from './components/Partners'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Header />
       <Partners />
       <HowItWorks />
+      <OnlineSchool />
     </div>
   )
 }
