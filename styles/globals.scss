@@ -1,9 +1,9 @@
 @use 'core' as *;
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: get($fonts, 'primary');
 
   ::-webkit-scrollbar {
     width: 6px;
@@ -21,7 +21,8 @@
 }
 
 body {
-  background: get($colors, 'main-bg');
+  padding: 10px;
+  background: get($colors, 'white-bg');
 }
 
 a {
@@ -46,6 +47,13 @@ input {
 
 button {
   cursor: pointer;
+  border: none;
+}
+
+.Container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .overlay {

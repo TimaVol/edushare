@@ -1,0 +1,80 @@
+@use '../core' as *;
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 336px;
+    width: 100%;
+    a {
+      font-size: 15px;
+
+      &.active {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .signIn {
+    padding: 15px 35px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: get($colors, 'blue-text');
+    background: get($colors, 'blue-bg');
+  }
+}
+
+.Intro {
+  display: flex;
+  justify-content: space-between;
+
+  .textWrap {
+    max-width: 447px;
+    margin-right: 20px;
+    padding-top: 56px;
+    h1 {
+      margin-bottom: 28px;
+      color: get($colors, 'black-text');
+      @include adaptiv-font(60, 20);
+    }
+
+    .subtitle {
+      margin-bottom: 28px;
+      color: get($colors, 'gray-text');
+      font-family: get($fonts, 'secondary');
+      line-height: 32px;
+      @include adaptiv-font(20, 16);
+    }
+
+    button {
+      padding: 20px 50px;
+      margin-bottom: 35px;
+      border-radius: 16px;
+      font-weight: 600;
+      @include adaptiv-font(18, 16);
+      color: get($colors, 'white-text');
+      background: get($colors, 'orange-bg');
+    }
+
+    .hint {
+      color: get($colors, 'gray-text');
+      @include adaptiv-font(18, 16);
+
+      a {
+        color: get($colors, 'blue-text');
+      }
+    }
+  }
+
+  .imgWrap {
+    position: relative;
+    height: 560px;
+    width: 594px;
+  }
+}

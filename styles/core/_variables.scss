@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rufina:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto&display=swap');
 
 $maxWidth: 1920;
 $minWidth: 320;
@@ -23,9 +23,14 @@ $z-indexes: (
 );
 
 $colors: (
-  'white': #ffffff,
-  'black': rgb(0, 0, 0),
+  'white-bg': #ffffff,
+  'white-text': #fef4f1,
+  'black-text': #101130,
+  'gray-text': #606176,
   'main-bg': #728fc2,
+  'blue-bg': #e8f1ff,
+  'blue-text': #2378ff,
+  'orange-bg': #f77e53,
   'second': rgb(39, 202, 69),
   'font': #ffffff,
   'linkHover': rgb(21, 21, 21),
@@ -34,12 +39,12 @@ $colors: (
 
 $fonts: (
   'primary': (
-    'Roboto',
+    'Inter',
     sans-serif,
   ),
   'secondary': (
-    'Rufina',
-    serif,
+    'Roboto',
+    sans-serif,
   ),
 );
 
