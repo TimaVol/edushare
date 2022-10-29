@@ -1,0 +1,46 @@
+@use '../core' as *;
+
+.HowItWorks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 130px;
+
+  .img {
+    position: relative;
+    height: 703px;
+    width: 429px;
+  }
+
+  .mainInfo {
+    max-width: 607px;
+
+    h2 {
+      max-width: 431px;
+      margin-bottom: 60px;
+      @include adaptiv-font(44, 30);
+      font-weight: bold;
+      line-height: 56px;
+    }
+
+    .infoBoard {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 45px 82px;
+
+      svg {
+        margin-bottom: 26px;
+      }
+      h3 {
+        margin-bottom: 12px;
+        @include adaptiv-font(20, 18);
+      }
+
+      p {
+        color: get($colors, 'gray-text');
+        @include adaptiv-font(18, 16);
+        line-height: 30px;
+      }
+    }
+  }
+}
