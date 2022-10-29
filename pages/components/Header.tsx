@@ -37,7 +37,7 @@ export default function Header() {
         </div>
 
         <div className={styles.imgWrap}>
-          <Image src={'/intro.png'} layout="fill" alt="intor banner" />
+          <Image src={'/intro.png'} layout="fill" alt="intor banner" priority />
         </div>
       </Container>
     </header>

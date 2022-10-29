@@ -1,0 +1,30 @@
+@use '../core' as *;
+
+.Partners {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 130px;
+
+  .text {
+    max-width: 220px;
+    margin-right: 95px;
+    .count {
+      margin-bottom: 10px;
+      @include adaptiv-font(62, 40);
+      font-weight: bold;
+    }
+
+    .subtitle {
+      @include adaptiv-font(20, 16);
+      line-height: 28px;
+      color: get($colors, 'gray-text');
+    }
+  }
+
+  .imgsWrap {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 45px;
+  }
+}
