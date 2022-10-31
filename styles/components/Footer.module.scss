@@ -1,0 +1,17 @@
+@use '../core' as *;
+
+.Footer {
+  .links {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    column-gap: 175px;
+    margin-bottom: 100px;
+  }
+
+  .copyrights {
+    padding: 40px 0;
+    border-top: 1px solid get($colors, 'gray-text');
+    color: get($colors, 'gray-text');
+    font-size: 15px;
+  }
+}

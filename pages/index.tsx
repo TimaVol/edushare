@@ -6,6 +6,7 @@ import OnlineSchool from '../components/OnlineSchool'
 import Partners from '../components/Partners'
 import Testimonial from '../components/Testimonial'
 import Pricing from '../components/Pricing'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
         <Testimonial />
         <Pricing />
       </main>
+
+      <Footer />
     </div>
   )
 }
