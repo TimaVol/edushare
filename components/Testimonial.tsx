@@ -103,7 +103,6 @@ export default function Testimonial() {
       <Carousel
         showIndicators={false}
         showThumbs={false}
-        emulateTouch
         selectedItem={currentSlide}
         showStatus={false}
       >
