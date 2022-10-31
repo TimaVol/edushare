@@ -1,7 +1,7 @@
 import Container from './Container'
-import styles from '../../styles/components/OnlineSchool.module.scss'
+import styles from '../styles/components/OnlineSchool.module.scss'
 import Image from 'next/image'
-import { Cart, Time, Users } from '../../common/icons'
+import { Cart, Time, Users } from '../common/icons'
 
 export default function OnlineSchool() {
   return (

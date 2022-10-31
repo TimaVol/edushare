@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Logo } from '../../common/icons'
-import styles from '../../styles/components/Header.module.scss'
+import { Logo } from '../common/icons'
+import styles from '../styles/components/Header.module.scss'
 import Container from './Container'
 
 export default function Header() {

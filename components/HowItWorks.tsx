@@ -1,6 +1,6 @@
 import Container from './Container'
-import styles from '../../styles/components/HowItWorks.module.scss'
-import { Book, Canvas, Hierarchy, Note } from '../../common/icons'
+import styles from '../styles/components/HowItWorks.module.scss'
+import { Book, Canvas, Hierarchy, Note } from '../common/icons'
 import Image from 'next/image'
 
 export default function HowItWorks() {

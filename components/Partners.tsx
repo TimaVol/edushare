@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Container from './Container'
 
-import styles from '../../styles/components/Partners.module.scss'
+import styles from '../styles/components/Partners.module.scss'
 
 export default function Partners() {
   return (

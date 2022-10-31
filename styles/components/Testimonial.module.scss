@@ -1,0 +1,94 @@
+@use '../core' as *;
+
+.Testimonial {
+  margin-bottom: 130px;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    h2 {
+      max-width: 450px;
+      @include adaptiv-font(44, 30);
+      font-weight: bold;
+      line-height: 56px;
+    }
+
+    .sliderController {
+      display: flex;
+
+      svg {
+        cursor: pointer;
+        path {
+          transition: get($transition, 'primary');
+        }
+
+        &:hover {
+          path {
+            stroke: get($colors, 'black-text');
+          }
+        }
+      }
+
+      .right {
+        margin-left: 35px;
+        svg {
+          transform: rotateZ(180deg);
+        }
+      }
+    }
+  }
+
+  .sliderSlide {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+
+    .sliderItem {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 452px;
+      max-width: 450px;
+
+      h3 {
+        max-width: 330px;
+        margin-bottom: 35px;
+        @include adaptiv-font(22, 18);
+        font-weight: 500;
+        line-height: 28px;
+      }
+
+      .subtitle {
+        margin-bottom: 45px;
+        color: get($colors, 'gray-text');
+        @include adaptiv-font(18, 15);
+        line-height: 30px;
+      }
+
+      .userData {
+        display: flex;
+
+        .img {
+          position: relative;
+          height: 60px;
+          width: 60px;
+          margin-right: 27px;
+        }
+
+        .userText {
+          h5 {
+            margin-bottom: 5px;
+            @include adaptiv-font(20, 18);
+          }
+
+          p {
+            margin-bottom: 8px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

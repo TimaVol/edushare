@@ -1,5 +1,5 @@
 import Container from './Container'
-import styles from '../../styles/components/Features.module.scss'
+import styles from '../styles/components/Features.module.scss'
 import Image from 'next/image'
 export default function Features() {
   return (
