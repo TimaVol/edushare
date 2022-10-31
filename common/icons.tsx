@@ -1,10 +1,15 @@
-export const Logo = () => (
+interface LogoProps {
+  className?: string
+}
+
+export const Logo = ({ className }: LogoProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="147"
     height="38"
     viewBox="0 0 147 38"
     fill="none"
+    className={className}
   >
     <rect width="38" height="38" rx="19" fill="#F77E53" />
     <path

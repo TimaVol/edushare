@@ -9,9 +9,9 @@ export default function Footer() {
       <Container className={styles.Footer}>
         <div className={styles.links}>
           <div>
-            <Logo />
+            <Logo className={styles.logo} />
 
-            <p>
+            <p className={styles.slogan}>
               Our motto to fulfill customer demand by making them satisfied with
               growing their business.
             </p>

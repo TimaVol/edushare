@@ -3,9 +3,35 @@
 .Footer {
   .links {
     display: grid;
-    grid-template-columns: repeat(4, min-content);
+    grid-template-columns: repeat(4, auto);
     column-gap: 175px;
+    width: 100%;
     margin-bottom: 100px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h4 {
+      margin-bottom: 35px;
+      font-weight: 600;
+      @include adaptiv-font(24, 20);
+    }
+
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    .slogan {
+      max-width: 285px;
+      width: 100%;
+    }
+
+    a {
+      margin-bottom: 21px;
+      color: get($colors, 'gray-text');
+    }
   }
 
   .copyrights {
