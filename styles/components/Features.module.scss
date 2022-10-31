@@ -1,0 +1,81 @@
+@use '../core' as *;
+
+.Features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 130px;
+
+  .info {
+    max-width: 470px;
+
+    h2 {
+      margin-bottom: 35px;
+      font-weight: bold;
+      line-height: 56px;
+      @include adaptiv-font(44, 35);
+    }
+
+    p {
+      margin-bottom: 25px;
+      font-family: get($fonts, 'secondary');
+      line-height: 30px;
+      @include adaptiv-font(18, 16);
+      color: get($colors, 'gray-text');
+    }
+
+    button {
+      padding: 20px 50px;
+      margin-bottom: 35px;
+      border-radius: 16px;
+      font-weight: 600;
+      @include adaptiv-font(18, 16);
+      color: get($colors, 'white-text');
+      background: get($colors, 'orange-bg');
+    }
+  }
+
+  .player {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 565px;
+    width: 545px;
+    border-radius: 18px;
+    background: get($colors, 'gray-bg');
+
+    .img {
+      position: relative;
+      left: -44px;
+      cursor: pointer;
+    }
+
+    .galery {
+      position: relative;
+      left: 4px;
+      bottom: -55px;
+      display: grid;
+      grid-template-columns: repeat(3, 145px);
+      height: 115px;
+      column-gap: 18px;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background: get($colors, 'white-bg');
+        box-shadow: 0px 20px 25px -12px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+
+        p {
+          margin-top: 12px;
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

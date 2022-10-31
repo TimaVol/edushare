@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.scss'
+import Features from './components/Features'
 import Header from './components/Header'
 import HowItWorks from './components/HowItWorks'
 import OnlineSchool from './components/OnlineSchool'
@@ -11,6 +12,7 @@ export default function Home() {
       <Partners />
       <HowItWorks />
       <OnlineSchool />
+      <Features />
     </div>
   )
 }
