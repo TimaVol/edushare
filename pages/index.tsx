@@ -5,6 +5,7 @@ import HowItWorks from '../components/HowItWorks'
 import OnlineSchool from '../components/OnlineSchool'
 import Partners from '../components/Partners'
 import Testimonial from '../components/Testimonial'
+import Pricing from '../components/Pricing'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <OnlineSchool />
         <Features />
         <Testimonial />
+        <Pricing />
       </main>
     </div>
   )

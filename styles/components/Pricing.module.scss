@@ -1,0 +1,162 @@
+@use '../core' as *;
+
+.Pricing {
+  margin-bottom: 130px;
+  .header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    h2 {
+      max-width: 591px;
+      @include adaptiv-font(44, 35);
+      font-weight: bold;
+      line-height: 56px;
+    }
+
+    button {
+      padding: 19px 23px;
+      border-radius: 12px;
+      border: 1px solid get($colors, 'blue-text');
+      color: get($colors, 'blue-text');
+      background: transparent;
+      font-size: 18px;
+    }
+  }
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 305px);
+    column-gap: 105px;
+    justify-content: center;
+
+    .item {
+      border-radius: 18px;
+      overflow: hidden;
+      background: get($colors, 'blue-light');
+
+      &.Medium {
+        background: get($colors, 'yellow-light');
+
+        .pricingHeader {
+          background: get($colors, 'yellow-text');
+        }
+        .content {
+          .list {
+            p {
+              &::before {
+                background: get($colors, 'yellow-text');
+              }
+            }
+          }
+          button {
+            border-color: get($colors, 'yellow-text');
+            color: get($colors, 'yellow-text');
+
+            &:hover {
+              background: get($colors, 'yellow-text');
+              color: get($colors, 'white-text');
+            }
+          }
+        }
+      }
+
+      &.Premium {
+        background: get($colors, 'orange-light');
+
+        .pricingHeader {
+          background: get($colors, 'orange-bg');
+        }
+        .content {
+          .list {
+            p {
+              &::before {
+                background: get($colors, 'orange-bg');
+              }
+            }
+          }
+          button {
+            border-color: get($colors, 'orange-bg');
+            color: get($colors, 'orange-bg');
+
+            &:hover {
+              background: get($colors, 'orange-bg');
+              color: get($colors, 'white-text');
+            }
+          }
+        }
+      }
+
+      .pricingHeader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 36px 102px 26px;
+        color: get($colors, 'white-text');
+        background: get($colors, 'blue-text');
+
+        h3 {
+          font-weight: 500;
+          line-height: 38px;
+          @include adaptiv-font(26, 20);
+        }
+      }
+
+      .content {
+        padding: 40px 22px 22px;
+
+        .price {
+          margin-bottom: 40px;
+          @include adaptiv-font(44, 30);
+          font-weight: bold;
+          text-align: center;
+          sup {
+            @include adaptiv-font(22, 18);
+            font-weight: 500;
+          }
+        }
+
+        .list {
+          @include adaptiv-font(20, 16);
+          color: get($colors, 'gray-text');
+
+          p {
+            position: relative;
+            margin-bottom: 30px;
+            margin-left: 22px;
+            &::before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 50%;
+              left: -22px;
+              transform: translateY(-50%);
+              height: 12px;
+              width: 12px;
+              border-radius: 100px;
+              background-color: get($colors, 'blue-text');
+            }
+          }
+        }
+
+        button {
+          width: 100%;
+          padding: 23px 88px;
+          border: 1px solid get($colors, 'blue-text');
+          border-radius: 14px;
+          background: transparent;
+          font-weight: 600;
+          @include adaptiv-font(20, 16);
+          color: get($colors, 'blue-text');
+          transition: get($transition, 'primary');
+
+          &:hover {
+            background: get($colors, 'blue-text');
+            color: get($colors, 'white-text');
+          }
+        }
+      }
+    }
+  }
+}
