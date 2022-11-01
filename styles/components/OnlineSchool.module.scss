@@ -22,6 +22,12 @@
       color: get($colors, 'blue-text');
       background: transparent;
       font-size: 18px;
+      transition: get($transition, 'primary');
+
+      &:hover {
+        background: get($colors, 'blue-text');
+        color: get($colors, 'white-text');
+      }
     }
   }
 

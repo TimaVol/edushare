@@ -27,6 +27,12 @@
     font-weight: 600;
     color: get($colors, 'blue-text');
     background: get($colors, 'blue-bg');
+    transition: get($transition, 'primary');
+
+    &:hover {
+      color: get($colors, 'white-text');
+      background-color: get($colors, 'blue-text');
+    }
   }
 }
 
@@ -73,7 +79,7 @@
 
   .imgWrap {
     position: relative;
-    height: 560px;
+    height: 540px;
     width: 594px;
   }
 }
