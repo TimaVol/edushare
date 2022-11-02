@@ -11,6 +11,10 @@
     justify-content: space-between;
     max-width: 336px;
     width: 100%;
+
+    @include mq('tablet') {
+      display: none;
+    }
     a {
       font-size: 15px;
 
@@ -28,7 +32,9 @@
     color: get($colors, 'blue-text');
     background: get($colors, 'blue-bg');
     transition: get($transition, 'primary');
-
+    @include mq('tablet') {
+      display: none;
+    }
     &:hover {
       color: get($colors, 'white-text');
       background-color: get($colors, 'blue-text');
@@ -40,10 +46,20 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 125px;
+
+  @include mq('tablet') {
+    flex-direction: column;
+  }
+
   .textWrap {
     max-width: 447px;
     margin-right: 20px;
     padding-top: 56px;
+
+    @include mq('tablet-wide') {
+      max-width: 45%;
+    }
+
     h1 {
       margin-bottom: 28px;
       @include adaptiv-font(60, 20);
@@ -54,7 +70,7 @@
       color: get($colors, 'gray-text');
       font-family: get($fonts, 'secondary');
       line-height: 32px;
-      @include adaptiv-font(20, 16);
+      @include adaptiv-font(20, 12);
     }
 
     button {
@@ -76,10 +92,13 @@
       }
     }
   }
-
-  .imgWrap {
+  .img {
     position: relative;
-    height: 540px;
+    height: 560px;
     width: 594px;
+
+    @include mq('tablet-wide') {
+      height: 400px;
+    }
   }
 }

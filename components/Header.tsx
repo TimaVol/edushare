@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Logo } from '../common/icons'
 import styles from '../styles/components/Header.module.scss'
+import BurgerMenu from './BurgerMenu'
 import Container from './Container'
 
 export default function Header() {
@@ -17,7 +18,7 @@ export default function Header() {
           <Link href="/">Courses</Link>
           <Link href="/">Contact</Link>
         </nav>
-
+        <BurgerMenu />
         <button className={styles.signIn}>Sign In</button>
       </Container>
       <Container className={styles.Intro}>
@@ -36,7 +37,7 @@ export default function Header() {
           </p>
         </div>
 
-        <div className={styles.imgWrap}>
+        <div className={styles.img}>
           <Image src={'/intro.png'} layout="fill" alt="intor banner" priority />
         </div>
       </Container>

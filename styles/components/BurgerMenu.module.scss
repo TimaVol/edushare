@@ -1,0 +1,123 @@
+@use '../core' as *;
+
+$menuWith: 50vw;
+
+.bm_button {
+  display: none;
+  @include mq('tablet') {
+    display: block;
+  }
+  cursor: pointer;
+}
+
+.burgerWrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  &.enter {
+    .bm_body {
+      right: (-$menuWith);
+    }
+
+    .overlay {
+      opacity: 0;
+    }
+  }
+
+  &.enterActive {
+    .bm_body {
+      right: 0;
+    }
+
+    .overlay {
+      opacity: 1;
+    }
+  }
+
+  &.enterDone {
+    .bm_body {
+      right: 0;
+    }
+    .overlay {
+      opacity: 1;
+    }
+  }
+
+  &.exit {
+    opacity: 1;
+    .bm_body {
+      right: 0;
+    }
+
+    .overlay {
+      opacity: 1;
+    }
+  }
+
+  &.exitActive {
+    .bm_body {
+      right: (-$menuWith);
+    }
+
+    .overlay {
+      opacity: 0;
+    }
+  }
+
+  .bm_body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: $menuWith;
+    padding: 10px;
+    cursor: default;
+    background: get($colors, 'white-bg');
+    transition: get($transition, 'secondary');
+
+    z-index: z('modal');
+
+    .closeBtn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .signIn {
+      padding: 15px 35px;
+      margin: 0 auto 20px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      color: get($colors, 'blue-text');
+      background: get($colors, 'blue-bg');
+    }
+
+    a {
+      margin-bottom: 10px;
+
+      &.active {
+        font-weight: 600;
+      }
+    }
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    background-color: get($colors, 'overlay');
+    transition: get($transition, 'secondary');
+    opacity: 0;
+    overflow: hidden;
+  }
+}
