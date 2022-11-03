@@ -48,7 +48,8 @@
   margin-bottom: 125px;
 
   @include mq('tablet') {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   .textWrap {
@@ -58,6 +59,10 @@
 
     @include mq('tablet-wide') {
       max-width: 45%;
+    }
+
+    @include mq('tablet') {
+      max-width: 100%;
     }
 
     h1 {
@@ -99,6 +104,10 @@
 
     @include mq('tablet-wide') {
       height: 400px;
+    }
+
+    @include mq('tablet') {
+      height: 510px;
     }
   }
 }

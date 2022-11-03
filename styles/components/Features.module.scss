@@ -6,9 +6,15 @@
   align-items: center;
   margin-bottom: 130px;
 
+  @include mq('tablet') {
+    flex-direction: column;
+  }
+
   .info {
     max-width: 470px;
-
+    @include mq('tablet') {
+      max-width: 100%;
+    }
     h2 {
       margin-bottom: 35px;
       font-weight: bold;
@@ -42,13 +48,36 @@
     justify-content: flex-end;
     height: 565px;
     width: 545px;
+    margin-left: 50px;
     border-radius: 18px;
     background: get($colors, 'gray-bg');
+
+    @include mq('tablet-wide') {
+      height: 400px;
+      width: 400px;
+    }
+
+    @include mq('tablet') {
+      height: 565px;
+      width: 545px;
+    }
+
+    @include mq('tablet-small') {
+      height: 400px;
+      width: 400px;
+    }
 
     .img {
       position: relative;
       left: -44px;
+      height: 360px;
+      width: 530px;
       cursor: pointer;
+
+      @include mq('tablet-small') {
+        height: 250px;
+        width: 400px;
+      }
     }
 
     .galery {
@@ -56,7 +85,7 @@
       left: 4px;
       bottom: -55px;
       display: grid;
-      grid-template-columns: repeat(3, 145px);
+      grid-template-columns: repeat(3, minmax(100px, 145px));
       height: 115px;
       column-gap: 18px;
 

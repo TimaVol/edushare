@@ -4,9 +4,15 @@
   .links {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    column-gap: 175px;
+    justify-content: space-between;
+    column-gap: 25px;
     width: 100%;
     margin-bottom: 100px;
+
+    @include mq('tablet') {
+      grid-template-columns: repeat(3, auto);
+      gap: 25px;
+    }
 
     div {
       display: flex;

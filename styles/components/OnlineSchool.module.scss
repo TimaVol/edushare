@@ -6,17 +6,19 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 60px;
 
     h2 {
       max-width: 431px;
-      @include adaptiv-font(44, 35);
+      @include adaptiv-font(44, 30);
       font-weight: bold;
       line-height: 56px;
     }
 
     button {
       padding: 19px 23px;
+      margin-left: auto;
       border-radius: 12px;
       border: 1px solid get($colors, 'blue-text');
       color: get($colors, 'blue-text');
@@ -33,11 +35,24 @@
 
   .board {
     display: grid;
-    grid-template-columns: repeat(3, 270px);
+    grid-template-columns: repeat(3, minmax(220px, 270px));
     justify-content: space-between;
+
+    @include mq('tablet') {
+      grid-template-columns: repeat(2, minmax(220px, 270px));
+      justify-items: center;
+      justify-content: space-around;
+    }
 
     .item {
       padding: 12px 15px;
+
+      &:last-child {
+        @include mq('tablet') {
+          grid-column-start: span 2;
+          max-width: 270px;
+        }
+      }
 
       .img {
         margin-bottom: 16px;
@@ -62,6 +77,10 @@
 
           &:first-child {
             margin-right: 40px;
+
+            @include mq('tablet-wide') {
+              margin-right: 20px;
+            }
           }
         }
       }

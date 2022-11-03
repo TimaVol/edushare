@@ -6,6 +6,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 60px;
 
     h2 {
@@ -17,6 +18,7 @@
 
     button {
       padding: 19px 23px;
+      margin-left: auto;
       border-radius: 12px;
       border: 1px solid get($colors, 'blue-text');
       color: get($colors, 'blue-text');
@@ -33,9 +35,20 @@
 
   .board {
     display: grid;
-    grid-template-columns: repeat(3, 305px);
-    column-gap: 105px;
-    justify-content: center;
+    grid-template-columns: repeat(3, minmax(220px, 305px));
+    column-gap: 30px;
+    justify-content: space-between;
+
+    @include mq('tablet') {
+      grid-template-columns: repeat(2, minmax(220px, 305px));
+      justify-items: center;
+      gap: 30px;
+    }
+
+    @include mq('tablet-small') {
+      grid-template-columns: repeat(1, minmax(220px, 305px));
+      justify-content: center;
+    }
 
     .item {
       border-radius: 18px;
@@ -70,6 +83,15 @@
 
       &.Premium {
         background: get($colors, 'orange-light');
+
+        @include mq('tablet') {
+          grid-column-start: span 2;
+          max-width: 305px;
+        }
+
+        @include mq('tablet-small') {
+          grid-column-start: 1;
+        }
 
         .pricingHeader {
           background: get($colors, 'orange-bg');
@@ -148,7 +170,7 @@
 
         button {
           width: 100%;
-          padding: 23px 80px;
+          padding: 23px 0;
           border: 1px solid get($colors, 'blue-text');
           border-radius: 14px;
           background: transparent;

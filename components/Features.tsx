@@ -14,13 +14,7 @@ export default function Features() {
       </div>
       <div className={styles.player}>
         <div className={styles.img}>
-          <Image
-            src={'/lecture1.png'}
-            height="360px"
-            width="530px"
-            alt="lecture"
-            priority
-          />
+          <Image src={'/lecture1.png'} layout="fill" alt="lecture" priority />
         </div>
 
         <div className={styles.galery}>

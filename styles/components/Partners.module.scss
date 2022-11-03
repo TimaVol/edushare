@@ -26,5 +26,9 @@
     display: grid;
     grid-template-columns: repeat(4, auto);
     column-gap: 45px;
+    @include mq('tablet') {
+      grid-template-columns: repeat(2, auto);
+      gap: 45px;
+    }
   }
 }

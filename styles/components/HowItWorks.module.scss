@@ -5,15 +5,32 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 130px;
-
+  @include mq('tablet') {
+    flex-direction: column;
+  }
   .img {
     position: relative;
     height: 703px;
     width: 429px;
+
+    @include mq('tablet-wide') {
+      height: 503px;
+    }
+
+    @include mq('tablet') {
+      height: 703px;
+    }
   }
 
   .mainInfo {
     max-width: 607px;
+
+    @include mq('tablet-wide') {
+      max-width: 65%;
+    }
+    @include mq('tablet') {
+      max-width: 100%;
+    }
 
     h2 {
       max-width: 431px;
