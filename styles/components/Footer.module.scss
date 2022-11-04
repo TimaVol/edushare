@@ -14,28 +14,39 @@
       gap: 25px;
     }
 
+    @include mq('phablet') {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
     div {
       display: flex;
       flex-direction: column;
     }
 
     h4 {
-      margin-bottom: 35px;
+      margin: 10px 0 35px;
       font-weight: 600;
-      @include adaptiv-font(24, 20);
+      @include adaptiv-font(24, 14);
     }
 
     .logo {
       margin-bottom: 30px;
+
+      @include mq('phablet') {
+        max-width: 120px;
+      }
     }
 
     .slogan {
       max-width: 285px;
       width: 100%;
+      @include adaptiv-font(16, 12);
     }
 
     a {
       margin-bottom: 21px;
+      @include adaptiv-font(16, 12);
       color: get($colors, 'gray-text');
     }
   }
@@ -44,6 +55,6 @@
     padding: 40px 0;
     border-top: 1px solid get($colors, 'gray-text');
     color: get($colors, 'gray-text');
-    font-size: 15px;
+    @include adaptiv-font(15, 12);
   }
 }

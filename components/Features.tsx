@@ -19,30 +19,21 @@ export default function Features() {
 
         <div className={styles.galery}>
           <div className={styles.item}>
-            <Image
-              src={'/lecture2.png'}
-              height="45px"
-              width="80px"
-              alt="lecture"
-            />
+            <div className={styles.galeryImg}>
+              <Image src={'/lecture2.png'} layout="fill" alt="lecture" />
+            </div>
             <p>Lecture 2</p>
           </div>
           <div className={styles.item}>
-            <Image
-              src={'/lecture3.png'}
-              height="45px"
-              width="80px"
-              alt="lecture"
-            />
+            <div className={styles.galeryImg}>
+              <Image src={'/lecture3.png'} layout="fill" alt="lecture" />
+            </div>
             <p>Lecture 3</p>
           </div>
           <div className={styles.item}>
-            <Image
-              src={'/lecture4.png'}
-              height="45px"
-              width="80px"
-              alt="lecture"
-            />
+            <div className={styles.galeryImg}>
+              <Image src={'/lecture4.png'} layout="fill" alt="lecture" />
+            </div>
             <p>Lecture 4</p>
           </div>
         </div>

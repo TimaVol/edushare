@@ -20,6 +20,11 @@
     @include mq('tablet') {
       height: 703px;
     }
+
+    @include mq('phablet') {
+      height: 500px;
+      width: 300px;
+    }
   }
 
   .mainInfo {
@@ -35,7 +40,6 @@
     h2 {
       max-width: 431px;
       margin-bottom: 60px;
-      @include adaptiv-font(44, 30);
       font-weight: bold;
       line-height: 56px;
     }
@@ -44,6 +48,10 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 45px 82px;
+
+      @include mq('phablet') {
+        grid-template-columns: repeat(1, 1fr);
+      }
 
       svg {
         margin-bottom: 26px;

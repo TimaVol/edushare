@@ -6,9 +6,19 @@
   justify-content: space-between;
   margin-bottom: 130px;
 
+  @include mq('phablet') {
+    flex-direction: column;
+  }
+
   .text {
     max-width: 220px;
     margin-right: 95px;
+
+    @include mq('phablet') {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 45px;
+    }
     .count {
       margin-bottom: 10px;
       @include adaptiv-font(62, 40);
@@ -26,9 +36,14 @@
     display: grid;
     grid-template-columns: repeat(4, auto);
     column-gap: 45px;
+
     @include mq('tablet') {
       grid-template-columns: repeat(2, auto);
       gap: 45px;
+    }
+
+    @include mq('phablet') {
+      grid-template-columns: repeat(1, auto);
     }
   }
 }

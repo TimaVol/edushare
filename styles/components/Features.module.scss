@@ -19,7 +19,6 @@
       margin-bottom: 35px;
       font-weight: bold;
       line-height: 56px;
-      @include adaptiv-font(44, 35);
     }
 
     p {
@@ -67,6 +66,12 @@
       width: 400px;
     }
 
+    @include mq('phablet') {
+      height: 280px;
+      width: 280px;
+      margin-left: 10px;
+    }
+
     .img {
       position: relative;
       left: -44px;
@@ -74,9 +79,25 @@
       width: 530px;
       cursor: pointer;
 
+      @include mq('tablet-wide') {
+        height: 250px;
+        width: 400px;
+      }
+
+      @include mq('tablet') {
+        height: 360px;
+        width: 530px;
+      }
+
       @include mq('tablet-small') {
         height: 250px;
         width: 400px;
+      }
+
+      @include mq('phablet') {
+        height: 180px;
+        width: 250px;
+        left: -10px;
       }
     }
 
@@ -85,9 +106,15 @@
       left: 4px;
       bottom: -55px;
       display: grid;
-      grid-template-columns: repeat(3, minmax(100px, 145px));
+      grid-template-columns: repeat(3, minmax(90px, 145px));
       height: 115px;
       column-gap: 18px;
+
+      @include mq('phablet') {
+        bottom: -30px;
+        height: 70px;
+        column-gap: 8px;
+      }
 
       .item {
         display: flex;
@@ -99,10 +126,21 @@
         box-shadow: 0px 20px 25px -12px rgba(0, 0, 0, 0.05);
         cursor: pointer;
 
+        .galeryImg {
+          position: relative;
+          height: 45px;
+          width: 80px;
+          margin-bottom: 12px;
+          @include mq('phablet') {
+            height: 35px;
+            width: 60px;
+            margin-bottom: 8px;
+          }
+        }
+
         p {
-          margin-top: 12px;
           font-weight: 500;
-          font-size: 14px;
+          @include adaptiv-font(14, 10);
         }
       }
     }

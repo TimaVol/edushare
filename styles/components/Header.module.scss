@@ -109,5 +109,10 @@
     @include mq('tablet') {
       height: 510px;
     }
+
+    @include mq('phablet') {
+      height: 250px;
+      width: 300px;
+    }
   }
 }

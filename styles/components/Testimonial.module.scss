@@ -6,18 +6,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 60px;
 
     h2 {
       max-width: 450px;
-      @include adaptiv-font(44, 30);
       font-weight: bold;
       line-height: 56px;
+
+      @include mq('phablet') {
+        margin-bottom: 10px;
+      }
     }
 
     .sliderController {
       display: flex;
-
+      margin-left: auto;
       svg {
         cursor: pointer;
         path {
@@ -40,55 +44,61 @@
     }
   }
 
-  .sliderSlide {
-    display: flex;
-    justify-content: space-between;
-    text-align: start;
-
-    .sliderItem {
+  .carousel {
+    .sliderSlide {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      max-width: 450px;
+      justify-content: space-between;
+      text-align: start;
 
-      &:first-child {
-        margin-right: 10px;
-      }
-
-      h3 {
-        max-width: 330px;
-        margin-bottom: 35px;
-        @include adaptiv-font(22, 18);
-        font-weight: 500;
-        line-height: 28px;
-      }
-
-      .subtitle {
-        margin-bottom: 45px;
-        color: get($colors, 'gray-text');
-        @include adaptiv-font(18, 15);
-        line-height: 30px;
-      }
-
-      .userData {
+      .sliderItem {
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 450px;
 
-        .img {
-          position: relative;
-          height: 60px;
-          width: 60px;
-          margin-right: 27px;
+        @include mq('phablet') {
+          max-width: 100%;
         }
 
-        .userText {
-          h5 {
-            margin-bottom: 5px;
-            @include adaptiv-font(20, 18);
+        &:first-child {
+          margin-right: 10px;
+        }
+
+        h3 {
+          max-width: 330px;
+          margin-bottom: 35px;
+          @include adaptiv-font(22, 18);
+          font-weight: 500;
+          line-height: 28px;
+        }
+
+        .subtitle {
+          margin-bottom: 45px;
+          color: get($colors, 'gray-text');
+          @include adaptiv-font(18, 15);
+          line-height: 30px;
+        }
+
+        .userData {
+          display: flex;
+
+          .img {
+            position: relative;
+            height: 60px;
+            width: 60px;
+            margin-right: 27px;
           }
 
-          p {
-            margin-bottom: 8px;
-            font-size: 14px;
+          .userText {
+            h5 {
+              margin-bottom: 5px;
+              @include adaptiv-font(20, 18);
+            }
+
+            p {
+              margin-bottom: 8px;
+              font-size: 14px;
+            }
           }
         }
       }

@@ -21,9 +21,13 @@
 }
 
 body {
-  padding: 20px;
+  padding: 10px;
   color: get($colors, 'black-text');
   background: get($colors, 'white-bg');
+}
+
+h2 {
+  @include adaptiv-font(44, 30);
 }
 
 a {
