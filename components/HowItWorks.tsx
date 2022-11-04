@@ -7,7 +7,11 @@ export default function HowItWorks() {
   return (
     <Container className={styles.HowItWorks}>
       <div className={styles.img}>
-        <Image src={'/howItWorks.png'} layout="fill" alt="how it work" />
+        <Image
+          src={'/peoplesAreLearning.png'}
+          layout="fill"
+          alt="how it work"
+        />
       </div>
       <div className={styles.mainInfo}>
         <h2>How our online public school works</h2>
