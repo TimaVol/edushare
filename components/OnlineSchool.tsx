@@ -43,7 +43,7 @@ export default function OnlineSchool() {
         <div className={styles.item}>
           <div className={styles.img}>
             <Image
-              src={'/ScienceAndMachine.png'}
+              src={'/scienceAndMachine.png'}
               height="165px"
               width="240px"
               alt="img"
@@ -70,7 +70,7 @@ export default function OnlineSchool() {
         <div className={styles.item}>
           <div className={styles.img}>
             <Image
-              src={'/PythonCourse.png'}
+              src={'/pythonCourse.png'}
               height="165px"
               width="240px"
               alt="img"
